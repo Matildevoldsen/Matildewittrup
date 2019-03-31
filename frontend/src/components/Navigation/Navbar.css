@@ -76,13 +76,13 @@
     display: inline;
 }
 
-@media screen and (max-width: 1020px) and (min-width: 720px) {
+@media screen and (max-width: 1020px) and (min-width: 820px) {
     .navbar .navbar--container {
         max-width: 95%;
     }
 }
 
-@media screen and (max-width: 719px){
+@media screen and (max-width: 819px){
     #nav .navbar--hidden {
         display: none;
     }
