@@ -8,6 +8,7 @@
 
 body {
   color: #000;
+  font-family: 'Roboto', sans-serif;
   background-color: #fefefe;
 }
 
@@ -28,7 +29,6 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -56,4 +56,8 @@ abbr[title] {
   background-color: #b3d4fc; /* 1 */
   color: #000000; /* 1 */
   text-shadow: none;
+}
+
+body {
+  margin: 0px;
 }

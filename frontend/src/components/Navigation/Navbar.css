@@ -1,0 +1,125 @@
+.navbar {
+    width: 100%;
+    background: #fff;
+    height: 60px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.navbar .navbar--container {
+    list-style-type: none;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.navbar .navbar--mobile {
+    display: none;
+}
+
+#nav .navbar--container .nav--right {
+    float: right;
+}
+
+#nav .navbar--collapse {
+    display: none;
+}
+
+.navbar .navbar--container .nav--item, .navbar .nav--logo {
+    float: left;
+    position: relative;
+}
+
+.navbar .nav--logo {
+    padding: 21px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin-left: 50px;
+}
+
+.navbar .navbar--container .nav--item a {
+    padding: 21px;
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar .navbar--container .nav--item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    display: block;
+    margin-top: 17px;
+    right: 0;
+    background: #ff7575;
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+}
+
+.navbar .navbar--container .nav--item a:hover:after {
+    width: 98%;
+    left: 0;
+    background: #ff7575;
+}
+
+.lock {
+    transition: all 1s;
+}
+
+.lock:hover .icon-unlock,
+.lock .icon-lock {
+    display: none;
+}
+.lock:hover .icon-lock {
+    display: inline;
+}
+
+@media screen and (max-width: 1020px) and (min-width: 720px) {
+    .navbar .navbar--container {
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 719px){
+    #nav .navbar--hidden {
+        display: none;
+    }
+
+    #nav .navbar--collapse {
+        display: block;
+        float: right;
+        padding: 15px;
+    }
+
+    #nav .navbar--collapse svg {
+        font-size: 30px;
+        color: #000;
+    }
+
+    #nav .nav--logo {
+        margin-left: 0;
+    }
+
+    #nav .navbar--container {
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        background: #fff;
+        box-shadow: 0px 3px 3px rgba(0,0,0,0.12), -1px 4px 2px rgba(0,0,0,0.24);
+    }
+
+    #nav .navbar--container .nav--item, #nav .navbar--container .nav--right {
+        float: none;
+        text-align: center;
+    }
+    
+    #nav .navbar--container li:hover {
+        background: #ff7575;
+    }
+
+    #nav .navbar--container li a::after {
+        content: none;
+    }
+}
