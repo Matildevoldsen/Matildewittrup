@@ -26,19 +26,19 @@ class Navigation extends Component {
                 <Link className="nav--logo" to={ROUTES.HOME}>{process.env.REACT_APP_NAME}</Link>
                 <ul className={this.state.isVisible ? 'navbar--container' : 'navbar--container navbar--hidden'}>
                     <li className="nav--item">
-                        <Link to={ROUTES.HOME}><FontAwesomeIcon icon={faHome}/> Home</Link>
+                        <Link to={ROUTES.HOME} onClick={this.onItemClick}><FontAwesomeIcon icon={faHome}/> Home</Link>
                     </li>
                     <li className="nav--item">
-                        <Link to={ROUTES.ACCOUNT}><FontAwesomeIcon icon={faUser}/> Account</Link>
+                        <Link to={ROUTES.ACCOUNT} onClick={this.onItemClick}><FontAwesomeIcon icon={faUser}/> Account</Link>
                     </li>
                     <li className="nav--item">
-                        <Link to={ROUTES.ADMIN}><FontAwesomeIcon icon={faToolbox}/> Admin</Link>
+                        <Link to={ROUTES.ADMIN} onClick={this.onItemClick}><FontAwesomeIcon icon={faToolbox}/> Admin</Link>
                     </li>
                     <li className="nav--item nav--right lock">
-                        <Link to={ROUTES.SIGN_IN}><FontAwesomeIcon className="icon-unlock" icon={faLock}/> <FontAwesomeIcon className="icon-lock" icon={faLockOpen}/> Sign In</Link>
+                        <Link to={ROUTES.SIGN_IN} onClick={this.onItemClick}><FontAwesomeIcon className="icon-unlock" icon={faLock}/> <FontAwesomeIcon className="icon-lock" icon={faLockOpen}/> Sign In</Link>
                     </li>
                     <li className="nav--item nav--right">
-                        <Link to={ROUTES.SIGN_UP}><FontAwesomeIcon icon={faUserPlus}/> Sign Up</Link>
+                        <Link to={ROUTES.SIGN_UP} onClick={this.onItemClick}><FontAwesomeIcon icon={faUserPlus}/> Sign Up</Link>
                     </li>
                 </ul>
 
