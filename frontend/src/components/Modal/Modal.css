@@ -8,6 +8,47 @@
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
+    transition: 1s all;
+}
+
+.modal-animate {
+    margin: 0!important;
+}
+
+.modal-animate-down {
+    margin-top: -1500px;
+}
+
+.modal-animate-up {
+    margin-bottom: -1500px;
+}
+
+.modal-animate-left {
+    margin-left: -2500px;
+}
+
+.modal-animate-right {
+    margin-right: -2500px;
+}
+
+.modal-animate-topleft {
+    margin-left: -2500px;
+    margin-top: -1500px;
+}
+
+.modal-animate-topright {
+    margin-right: -2500px;
+    margin-top: -1500px;
+}
+
+.modal-animate-bottomleft {
+    margin-left: -2500px;
+    margin-bottom: -1500px;
+}
+
+.modal-animate-bottomright {
+    margin-right: -2500px;
+    margin-bottom: -1500px;
 }
 
 .modal-overlay {

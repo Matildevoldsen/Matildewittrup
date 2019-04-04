@@ -4,3 +4,18 @@
     display: -webkit-flex;
     justify-content: space-between;
 }
+
+.modal-header .modal-exit {
+    border: 0;
+    position: static;
+    margin: 5px 10px;
+    font-size: 22px;
+    -webkit-transition: 0.4s color;
+    transition: 0.4s color;
+    color: #c0c0c0;
+}
+
+.modal-header .modal-exit:hover {
+    color: #000;
+    cursor: pointer;
+}
