@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-
-const BrowserHistory = require('react-router/lib/BrowserHistory').default;
+import './Header.css';
+import Large from "../../Headings/Large";
 
 class Header extends Component {
     render() {
         return (
             <div className="modal-header">
-                <h3>{this.props.title}</h3>
-                <button className="modal-exit" onClick={BrowserHistory.goBack}>X</button>
+                <Large text={this.props.title}/>
+                <button className="modal-exit">X</button>
             </div>
         );
     }
