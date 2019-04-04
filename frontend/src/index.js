@@ -7,11 +7,9 @@ import * as serviceWorker from './serviceWorker';
 import App from './App';
 import { BrowserRouter as Router } from "react-router-dom";
 
-import firebase from './firebase/firebase';
-
 ReactDOM.render(
     <Router>
-        <App firebase={firebase}/>
+        <App/>
     </Router>
     , document.getElementById('root'));
 
