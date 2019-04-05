@@ -5,7 +5,7 @@ class Login extends Component{
     render() {
         return(
             <div>
-                <Modal title="Login" modalAnimateClass="modal-animate-bottomright" />
+                <Modal title="Login" modalAnimateClass="modal-animate-up" />
             </div>
         );
     }
