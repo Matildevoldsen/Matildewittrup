@@ -15,6 +15,10 @@
     margin: 0!important;
 }
 
+.exit-modal {
+    opacity: 0;
+}
+
 .modal-animate-down {
     margin-top: -1500px;
 }
