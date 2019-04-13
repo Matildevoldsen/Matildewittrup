@@ -14,6 +14,7 @@ class Modal extends Component {
     }
 
     componentDidMount() {
+        this.props.modalAnimation(this.props.modalAnimateClass);
         this.runModalAnimation();
     }
 

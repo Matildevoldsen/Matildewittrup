@@ -1,7 +1,7 @@
 import {SHOW_MODAL} from "../actions/types";
 
 const initialState = {
-    modalAnimation: 'modal modal-animate-up'
+    modalAnimation: ''
 };
 
 export default function (state = initialState, action) {
