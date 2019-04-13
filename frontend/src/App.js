@@ -10,17 +10,19 @@ import Login from './pages/Login/Login';
 import {Provider} from 'react-redux';
 import store from './redux/store';
 import {withRouter} from "react-router-dom";
+import Register from "./pages/Register/Register";
 
 class App extends Component {
     render() {
         return (
             <Provider store={store}>
                 <div>
-                    <Navigation firebase={this.props.firebase}/>
+                    <Navigation/>
 
                     <Route path={ROUTES.HOME} exact component={() => <Home/>}/>
                     <Route path={ROUTES.ABOUT} exact component={() => <About/>}/>
                     <Route path={ROUTES.SIGN_IN} exact component={() => <Login/>}/>
+                    <Route path={ROUTES.SIGN_UP} exact component={() => <Register/>}/>
                 </div>
             </Provider>
         );

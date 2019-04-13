@@ -1,3 +1,11 @@
+.modal-container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .modal {
     width: 800px;
     height: 600px;
@@ -9,6 +17,8 @@
     -moz-border-radius: 2px;
     border-radius: 2px;
     transition: 1s all;
+    z-index: 999;
+    position: relative;
 }
 
 .modal-animate {
@@ -66,5 +76,5 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 100;
 }
