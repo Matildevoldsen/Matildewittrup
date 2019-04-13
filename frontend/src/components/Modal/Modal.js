@@ -23,7 +23,7 @@ class Modal extends Component {
             <div>
                 <div className="modal-overlay">
                     <div className={this.props.Modal} id="modal">
-                        <Header title={this.props.title}/>
+                        <Header modalAnimateExitClass={this.props.modalAnimateExitClass} title={this.props.title}/>
 
                         <Body/>
 

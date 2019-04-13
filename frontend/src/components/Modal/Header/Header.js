@@ -15,7 +15,7 @@ class Header extends Component {
     }
 
     goBack() {
-        this.props.modalAnimation('modal modal-animate-down');
+        this.props.modalAnimation(this.props.modalAnimateExitClass);
         setTimeout(() => {
             getHistory().goBack();
         }, 700);
