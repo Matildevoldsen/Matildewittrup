@@ -1,5 +1,5 @@
 # Matilde Wittrup - Tutorial site
-This code is going to be used for a tutorial site I'm publishing online. At the moment this project only have the frontend code done.
+This code is going to be used for a tutorial site I'm publishing online. The frontend uses ReactJS, Redux and will later on use axios to communicate with backend.
 
 ## Technical specifications
 The frontend consist of the following tech-stack:
