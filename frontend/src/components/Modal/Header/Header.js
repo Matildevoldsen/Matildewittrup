@@ -3,6 +3,7 @@ import './Header.css';
 import Large from "../../Headings/Large";
 import {faTimes} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import getHistory from './../../../history';
 
 class Header extends Component {
     render() {
@@ -10,7 +11,7 @@ class Header extends Component {
             <div className="modal-header">
                 <Large text={this.props.title}/>
                 <a className="modal-exit">
-                    <FontAwesomeIcon icon={faTimes}/>
+                    <FontAwesomeIcon onClick={getHistory().goBack} icon={faTimes}/>
                 </a>
             </div>
         );

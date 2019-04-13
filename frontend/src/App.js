@@ -9,6 +9,7 @@ import Login from './pages/Login/Login';
 //Redux dependencies & Store
 import {Provider} from 'react-redux';
 import store from './redux/store';
+import {withRouter} from "react-router-dom";
 
 class App extends Component {
     render() {
@@ -26,4 +27,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default withRouter(App);
