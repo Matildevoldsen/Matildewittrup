@@ -23,7 +23,7 @@
     display: none;
 }
 
-.navbar .navbar--container .nav--item, .navbar .nav--logo {
+.navbar .nav--logo {
     float: left;
     position: relative;
 }
@@ -38,44 +38,6 @@
     margin-left: 50px;
 }
 
-.navbar .navbar--container .nav--item a {
-    padding: 21px;
-    color: #000;
-    text-decoration: none;
-    display: block;
-}
-
-.navbar .navbar--container .nav--item a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 5px;
-    display: block;
-    margin-top: 17px;
-    right: 0;
-    background: #ff7575;
-    transition: width .2s ease;
-    -webkit-transition: width .2s ease;
-}
-
-.navbar .navbar--container .nav--item a:hover:after {
-    width: 98%;
-    left: 0;
-    background: #ff7575;
-}
-
-.lock {
-    transition: all 1s;
-}
-
-.lock:hover .icon-unlock,
-.lock .icon-lock {
-    display: none;
-}
-.lock:hover .icon-lock {
-    display: inline;
-}
-
 @media screen and (max-width: 1020px) and (min-width: 820px) {
     .navbar .navbar--container {
         max-width: 95%;
@@ -85,6 +47,7 @@
 @media screen and (max-width: 819px){
     #nav .navbar--hidden {
         opacity: 0!important;
+        top: -304px !important;
     }
 
     #nav .navbar--collapse {
@@ -108,20 +71,7 @@
         top: 60px;
         background: #fff;
         opacity: 1;
-        box-shadow: 0px 3px 3px rgba(0,0,0,0.12), -1px 4px 2px rgba(0,0,0,0.24);
-        transition: opacity 0.5s ease-out;
-    }
-
-    #nav .navbar--container .nav--item, #nav .navbar--container .nav--right {
-        float: none;
-        text-align: center;
-    }
-    
-    #nav .navbar--container li:hover {
-        background: #ff7575;
-    }
-
-    #nav .navbar--container li a::after {
-        content: none;
+        box-shadow: 0 3px 3px rgba(0,0,0,0.12), -1px 4px 2px rgba(0,0,0,0.24);
+        transition: all 0.5s ease-out;
     }
 }

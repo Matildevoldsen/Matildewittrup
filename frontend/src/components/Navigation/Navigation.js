@@ -1,45 +1,51 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './Navbar.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faBars, faHome, faUser, faToolbox, faLock, faUserPlus, faLockOpen} from '@fortawesome/free-solid-svg-icons'
-
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars, faLock, faUser, faUserPlus, faHome, faToolbox, faLockOpen} from '@fortawesome/free-solid-svg-icons';
+import Item from './Item/Item';
 import * as ROUTES from '../../constants/routes';
+import {connect} from "react-redux";
+import { showNav } from "../../redux/actions/showNavAction.js";
 
 class Navigation extends Component {
-    constructor(e) {
-        super(e);
+    constructor(props) {
+        super(props);
 
-        this.state = {isVisible: false};
         this.onItemClick = this.onItemClick.bind(this);
     }
-    onItemClick(e) {
-        if (this.state.isVisible === true)
-            this.setState({isVisible: false});
-        else
-            this.setState({isVisible: true});
+
+    onItemClick() {
+        const condition = !this.props.Nav;
+        this.props.showNav(condition);
     }
 
     render() {
         return (
             <nav className="navbar" id="nav">
                 <Link className="nav--logo" to={ROUTES.HOME}>{process.env.REACT_APP_NAME}</Link>
-                <ul className={this.state.isVisible ? 'navbar--container' : 'navbar--container navbar--hidden'}>
-                    <li className="nav--item">
-                        <Link to={ROUTES.HOME} onClick={this.onItemClick}><FontAwesomeIcon icon={faHome}/> Home</Link>
-                    </li>
-                    <li className="nav--item">
-                        <Link to={ROUTES.ACCOUNT} onClick={this.onItemClick}><FontAwesomeIcon icon={faUser}/> Account</Link>
-                    </li>
-                    <li className="nav--item">
-                        <Link to={ROUTES.ADMIN} onClick={this.onItemClick}><FontAwesomeIcon icon={faToolbox}/> Admin</Link>
-                    </li>
-                    <li className="nav--item nav--right lock">
-                        <Link to={ROUTES.SIGN_IN} onClick={this.onItemClick}><FontAwesomeIcon className="icon-unlock" icon={faLock}/> <FontAwesomeIcon className="icon-lock" icon={faLockOpen}/> Sign In</Link>
-                    </li>
-                    <li className="nav--item nav--right">
-                        <Link to={ROUTES.SIGN_UP} onClick={this.onItemClick}><FontAwesomeIcon icon={faUserPlus}/> Sign Up</Link>
-                    </li>
+                <ul className={this.props.Nav ? 'navbar--container' : 'navbar--container navbar--hidden'}>
+                    <Item toPath={ROUTES.HOME}>
+                        <FontAwesomeIcon icon={faHome}/> Home
+                    </Item>
+
+                    <Item toPath={ROUTES.ACCOUNT}>
+                        <FontAwesomeIcon icon={faUser}/> Account
+                    </Item>
+
+                    <Item toPath={ROUTES.ACCOUNT}>
+                        <FontAwesomeIcon icon={faToolbox}/> Admin
+                    </Item>
+
+                    <Item toPath={ROUTES.SIGN_IN} classes="nav--right lock">
+                        <FontAwesomeIcon className="icon-unlock" icon={faLock}/> <FontAwesomeIcon className="icon-lock"
+                                                                                                  icon={faLockOpen}/> Sign
+                        In
+                    </Item>
+
+                    <Item toPath={ROUTES.SIGN_UP} classes="nav--right">
+                        <FontAwesomeIcon icon={faUserPlus}/> Sign Up
+                    </Item>
                 </ul>
 
                 <a href="#" className="navbar--collapse" onClick={this.onItemClick}>
@@ -50,4 +56,8 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;
+const mapStateToProps = state => ({
+    Nav: state.nav.menu,
+});
+
+export default connect(mapStateToProps, {showNav})(Navigation);

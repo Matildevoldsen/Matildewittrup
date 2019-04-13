@@ -1,0 +1,57 @@
+.navbar .navbar--container .nav--item {
+    float: left;
+    position: relative;
+}
+
+.navbar .navbar--container .nav--item a {
+    padding: 21px;
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar .navbar--container .nav--item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    display: block;
+    margin-top: 17px;
+    right: 0;
+    background: #ff7575;
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+}
+
+.navbar .navbar--container .nav--item a:hover:after {
+    width: 98%;
+    left: 0;
+    background: #ff7575;
+}
+
+.lock {
+    transition: all 1s;
+}
+
+.lock:hover .icon-unlock,
+.lock .icon-lock {
+    display: none;
+}
+.lock:hover .icon-lock {
+    display: inline;
+}
+
+@media screen and (max-width: 819px) {
+    #nav .navbar--container .nav--item, #nav .navbar--container .nav--right {
+        float: none;
+        text-align: center;
+    }
+
+    #nav .navbar--container li:hover {
+        background: #ff7575;
+    }
+
+    #nav .navbar--container li a::after {
+        content: none;
+    }
+}
