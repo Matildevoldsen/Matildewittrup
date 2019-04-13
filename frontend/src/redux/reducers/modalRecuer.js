@@ -1,15 +1,15 @@
-import {SHOW_NAV} from "../actions/types";
+import {SHOW_MODAL} from "../actions/types";
 
 const initialState = {
-    menu: false
+    modalAnimation: 'modal modal-animate-up'
 };
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case SHOW_NAV:
+        case SHOW_MODAL:
             return {
                 ...state,
-                menu: action.payload
+                modalAnimation: action.payload
             };
         default:
             return state;

@@ -3,21 +3,13 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Body from "./Body/Body";
 import './Modal.css';
+import {connect} from "react-redux";
+import { modalAnimation } from "../../redux/actions/showModalAnimationAction.js";
 
 class Modal extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            modalClasses: 'modal ' + this.props.modalAnimateClass
-        };
-
-        this.runModalAnimation.bind();
-    }
-
     runModalAnimation() {
         setTimeout(() => {
-            this.setState({modalClasses: 'modal modal-animate'})
+            this.props.modalAnimation("modal");
         }, 250)
     }
 
@@ -29,7 +21,7 @@ class Modal extends Component {
         return (
             <div>
                 <div className="modal-overlay">
-                    <div className={this.state.modalClasses} id="modal">
+                    <div className={this.props.Modal} id="modal">
                         <Header title={this.props.title}/>
 
                         <Body/>
@@ -42,4 +34,8 @@ class Modal extends Component {
     }
 }
 
-export default Modal;
+const mapStateToProps = state => ({
+    Modal: state.modal.modalAnimation,
+});
+
+export default connect(mapStateToProps, {modalAnimation})(Modal);

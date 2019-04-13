@@ -39,8 +39,8 @@ class Navigation extends Component {
 
                     <Item toPath={ROUTES.SIGN_IN} classes="nav--right lock">
                         <FontAwesomeIcon className="icon-unlock" icon={faLock}/> <FontAwesomeIcon className="icon-lock"
-                                                                                                  icon={faLockOpen}/> Sign
-                        In
+                                         icon={faLockOpen}/>
+                                         Sign In
                     </Item>
 
                     <Item toPath={ROUTES.SIGN_UP} classes="nav--right">
