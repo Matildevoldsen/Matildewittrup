@@ -42,7 +42,9 @@ class Modal extends Component {
                 <div className={this.props.Modal} id="modal">
                     <Header modalAnimateExitClass={this.props.modalAnimateExitClass} title={this.props.title}/>
 
-                    <Body/>
+                    <Body>
+                        {this.props.children}
+                    </Body>
 
                     <Footer/>
                 </div>
