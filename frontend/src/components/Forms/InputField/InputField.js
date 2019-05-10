@@ -10,6 +10,7 @@ class InputField extends Component {
                            value={this.props.value ? this.props.value : ''}
                            onChange={this.props.handleChange}
                            name={this.props.name}
+                           autoComplete={this.props.autocomplete ? this.props.autocomplete : ''}
                            placeholder={this.props.placeholder ? this.props.placeholder : ''}/>
                     <span>{this.props.label ? this.props.label : ''}</span>
                 </label>

@@ -17,8 +17,6 @@ class Login extends Component {
     }
 
     submitForm(e) {
-
-
         e.preventDefault();
     }
 
@@ -44,6 +42,7 @@ class Login extends Component {
                         type="password"
                         className="input"
                         name="password"
+                        autocomplete="off"
                         value={this.state.password}
                         handleChange={this.handleChange}
                         label="Password"/>

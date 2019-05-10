@@ -23,7 +23,7 @@
     width: 100%;
     height: inherit;
     color: rgba(0, 0, 0, 0.87);
-    background-color: transparent;
+    background: #fff !important;
     box-shadow: none; /* Firefox */
     font-family: inherit;
     font-size: inherit;
@@ -131,7 +131,7 @@
 
 .input > input:focus + span,
 .input > textarea:focus + span {
-    color: rgb( 33, 150, 243);
+    color: rgb(33, 150, 243);
 }
 
 .input > input:focus + span::before,
@@ -164,7 +164,7 @@
 .input > input:disabled:placeholder-shown + span,
 .input > textarea:disabled:placeholder-shown,
 .input > textarea:disabled:placeholder-shown + span {
-    border-top-color: rgba(0, 0, 0, 0.38)!important;
+    border-top-color: rgba(0, 0, 0, 0.38) !important;
 }
 
 .input > input:disabled:placeholder-shown + span::before,

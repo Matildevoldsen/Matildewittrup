@@ -11,6 +11,7 @@ import {Provider} from 'react-redux';
 import store from './redux/store';
 import {withRouter} from "react-router-dom";
 import Register from "./pages/Register/Register";
+import Quill from "./components/Forms/Quill/Quill";
 
 class App extends Component {
     render() {
@@ -18,6 +19,8 @@ class App extends Component {
             <Provider store={store}>
                 <div>
                     <Navigation/>
+
+                    <Quill commentMode={true}/>
 
                     <Route path={ROUTES.HOME} exact component={() => <Home/>}/>
                     <Route path={ROUTES.ABOUT} exact component={() => <About/>}/>
